@@ -4,5 +4,5 @@
 
 ## The Data Science Lifecycle
 
-![Figure 1](https://github.com/LeeMorinUCF/ECO5445F19/tree/master/demo_01_intro/DSlifecycle1.png "The Data Science Lifecycle"| width=200)
+![Figure 1](https://github.com/LeeMorinUCF/ECO5445F19/tree/master/demo_01_intro/DSlifecycle1.png| width=200 "The Data Science Lifecycle")
 
