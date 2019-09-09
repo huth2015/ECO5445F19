@@ -173,7 +173,7 @@ rmdir dir1
 # Did it work?
 
 # What about this?
-rm -rf
+rm -rf dir1
 
 
 
@@ -392,7 +392,7 @@ ls -lh
 
 lsdir4
 
-# Start creting aliases for commands you type 
+# Start creating aliases for commands you type 
 # more than once a day. 
 # Be careful: Don't overwrite an existing command.
 
