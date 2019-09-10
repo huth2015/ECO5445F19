@@ -36,7 +36,9 @@ With this approach, GitHub is a much more versatile tool.
 
 ## Working in Parallel in Separate Branches
 
-<img src="GitHub_Branches.jpeg" width="555555 Version Control 2: Using the terminal
+<img src="GitHub_Branches.jpeg" width="500"/>
+
+## Version Control 2: Using the terminal
 
 
 To participate in this exercise, you should have installed [Git](https://git-scm.com/) and an associated terminal GitBash. 
