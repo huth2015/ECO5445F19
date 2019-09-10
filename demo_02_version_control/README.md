@@ -3,7 +3,9 @@
 The practice of saving successive versions of computer code is known as version control. With this practice, you can securely store past and present versions of your code on a remote computer and share it with others. 
 The version control platform that we will use is called GitHub and the reason for this choice is outlined in Paarsch and Golyaev.
 
+## GitHub Workflow 
 
+<img src="GitHub_Workflow.jpg" width="1000"/>
 
 ## Version Control 1: Opening an account
 
