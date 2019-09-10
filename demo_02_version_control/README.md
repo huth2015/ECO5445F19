@@ -36,7 +36,7 @@ With this approach, GitHub is a much more versatile tool.
 
 ## Working in Parallel in Separate Branches
 
-<img src="GitHUb_Branches.jpeg" width="1000"/>
+<img src="GitHub_Branches.jpeg" width="1000"/>
 
 
 ## Version Control 2: Using the terminal
