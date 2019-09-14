@@ -92,7 +92,7 @@ A helpful tip is to get accustomed to using the ```git status``` command. This w
 ### Making a Repo Private
 
 In a business setting, there may be sensitive information for which a select group has access.
-A repo and all of it's forks can be made private, so that only the collaborators can gain access.
+A repo and all of its forks can be made private, so that only the collaborators can gain access.
 However, the privacy setting places the same restriction for all collaborators and all forks, meaning that any collaborator can see the contributions made in every fork, and all forks must have the same privacy setting as the upstream repo.
 Often this setting is sufficient and the procedure for enacting this setting is as follows.
 
@@ -103,6 +103,26 @@ Often this setting is sufficient and the procedure for enacting this setting is 
 3. Enter the repo name to make it official.
 This is in the 'Danger Zone' because this could block access to someone who depends on this information, interrupting their workflow. In our case, it allows you to keep your work private.
 
-4. After this change, other collaborators cannot see your work, so you will have to invite them as collaborators. Scroll to the bottom, enter their username, such as LeeMorinUCF, and click 'Add collaborator'. The collaborator will be notified and will be sent a link to activate their status. 
+4. After this change, other collaborators cannot see your work, so you will have to invite them as collaborators. Scroll to the bottom, enter their username, such as LeeMorinUCF, and click 'Add collaborator'. The collaborator will be notified and will be sent a link to activate their status.
 
 ### Making a Private Clone of a Public Repo
+
+
+
+## Getting Your Bearings
+
+With all of the repositories, branches, forks and mirrors, it is easy to get lost. When working in a repo, one can find the url for the origin of your clone by entering the following.
+
+```
+git remote get-url origin
+```
+
+While this command does not work on all platforms, the following provides more verbose output.
+
+```
+git remote show origin
+```
+
+Notice that the output will show the url of the repo from which new content is fetched, the url to which your updates are pushed, along with a lising of the branches of the repo.
+
+For forked repos, the above commands can be modified with ```origin``` swapped for ```upstream``` to show the references for the upstream repo from which this repo was forked.
