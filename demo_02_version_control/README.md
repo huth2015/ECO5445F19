@@ -114,29 +114,30 @@ A command line version of this procedure is available here: [GitHub: How to make
 
 In essence, this amounts to creating a separate repository that happens to contain the same information as the original. 
 
-Since this is a one-time occurrence, this can bo done in your web browser your GitHub user page. 
-under the Repositories tab, click the green New button. 
-In the next screen, choose a name for your new repo. 
-Before clicking the green Create Repository button, set this new repo to Private. 
-After clicking the Create Repository button, you will move to a screen to add content to the new repo. 
-Since you are creating a mirror, scroll to the bottom and choose the Import Code button and enter the url for the original repo that you want to clone. 
-If you have access to this repo, it will initialize the content to your new repo. 
-This repo is ready to be cloned to your local machine. 
-In order to pull any new content to the original repo, this original repo will have to be set as the upstream repo. 
-Clone the new repo to your local machine and enter the following
+Since this is a one-time occurrence, this can bo done in your web browser from your GitHub user page. 
+
+1. Under the Repositories tab, click the green New button. 
+2. In the next screen, choose a name for your new repo. 
+3. Before clicking the green Create Repository button, set this new repo to Private. 
+4. After clicking the Create Repository button, you will move to a screen to add content to the new repo. 
+5. Since you are creating a mirror, scroll to the bottom and choose the Import Code button and enter the url for the original repo that you want to clone. 
+6. If you have access to this repo, it will initialize the content to your new repo. 
+7. This repo is ready to be cloned to your local machine. Use the ```git clone``` command as usual.
+8. In order to pull any new content to the original repo, this original repo will have to be set as the upstream repo. 
+After cloning the new repo to your local machine and enter the following
 
 ```
 git remote add upstream https://github.com/UpstreamGitUserName/UpstreamRepoName.git
 ```
 where you would get the url in the same way you would to clone the original upstream repo. 
 
-Now you can pull new content from the upstream to your local machine. 
+9. Now you can pull new content from the upstream to your local machine. 
 
 ```
 git pull upstream master
 ```
 where the pull is from the master branch of the upstream repo and not the orign. 
-Now these updates are on your local machine but have not been pushed to your mirror of the repo. 
+10. Now these updates are on your local machine but have not been pushed to your mirror of the repo. 
 
 ```
 git push origin master
