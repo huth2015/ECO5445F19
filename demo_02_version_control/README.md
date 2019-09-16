@@ -108,13 +108,13 @@ This is in the 'Danger Zone' because this could block access to someone who depe
 ### Making a Private Mirror of a Public Repo
 
 In order to have separate access restrictions to a copy of the repo, a simple solution is to create a new repository that mirrors the content of the original. 
-You might use this approach similar to the way you would use a fork, except that it is no different than any other repository. 
+You might use this mirror the same way you would use a fork, except that it is no different than any other repository. 
 
 A command line version of this procedure is available here: [GitHub: How to make a fork of a public repository private?](https://medium.com/@bilalbayasut/github-how-to-make-a-fork-of-public-repository-private-6ee8cacaf9d3)
 
 In essence, this amounts to creating a separate repository that happens to contain the same information as the original. 
 
-Since this is a one-time occurrence, this can bo done in your web browser from your GitHub user page. 
+Since this is a one-time occurrence, this can be done in your web browser from your GitHub user page. 
 
 1. Under the Repositories tab, click the green New button. 
 2. In the next screen, choose a name for your new repo. 
@@ -124,7 +124,7 @@ Since this is a one-time occurrence, this can bo done in your web browser from y
 6. If you have access to this repo, it will initialize the content to your new repo. 
 7. This repo is ready to be cloned to your local machine. Use the ```git clone``` command as usual.
 8. In order to pull any new content to the original repo, this original repo will have to be set as the upstream repo. 
-After cloning the new repo to your local machine and enter the following
+After cloning the new repo to your local machine, enter a command like the following
 
 ```
 git remote add upstream https://github.com/UpstreamGitUserName/UpstreamRepoName.git
@@ -137,6 +137,7 @@ where you would get the url in the same way you would to clone the original upst
 git pull upstream master
 ```
 where the pull is from the master branch of the upstream repo and not the orign. 
+
 10. Now these updates are on your local machine but have not been pushed to your mirror of the repo. 
 
 ```
@@ -170,7 +171,7 @@ For forked repos, the above commands can be modified with ```origin``` swapped f
 
 ### Updates to the Upstream Repo 
 
-For example, when your instructor adds new content:
+For example, when your instructor adds new content, pull those changes to your local machine and push them to your mirror of the repo:
 
 ```
 git pull upstream master
@@ -179,13 +180,15 @@ git push origin master
 
 ### Updates to Your Local Copy
 
-When you are working on your own coding project:
+When you are working on your own coding project, add commit and push those changes to your repo:
 
 ```
 git add .
 git commit -m 'Describe changes here'
 git push origin master
 ```
+
+This command will not work if your local copy is not up to date. 
 
 ### Updates from Another Clone of Your Repo
 
@@ -195,7 +198,7 @@ This command is used when you want to pull any changes from other contributors (
 git pull origin master
 ```
 
-If you want to push updates and your version is not current, you will have to pull the recent changes before you can push your updates to the repo. 
+As mentioned above, if you want to push updates and your version is not current, you will have to pull the recent changes before you can push your updates to the repo. 
 
 
 
