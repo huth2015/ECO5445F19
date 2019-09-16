@@ -7,7 +7,7 @@ The version control platform that we will use is called GitHub and the reason fo
 
 <img src="GitHub_Workflow.jpg" width="1000"/>
 
-## Version Control 1: Opening an account
+## Version Control 1: Through a Web Browser
 
 This exercise can be completed on any device that has access to the internet - including your smartphone.
 
