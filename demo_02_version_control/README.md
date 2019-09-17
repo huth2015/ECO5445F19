@@ -7,7 +7,7 @@ The version control platform that we will use is called GitHub and the reason fo
 
 <img src="GitHub_Workflow.jpg" width="1000"/>
 
-## Version Control 1: Opening an account
+## Version Control 1: Through a Web Browser
 
 This exercise can be completed on any device that has access to the internet - including your smartphone.
 
@@ -105,7 +105,46 @@ This is in the 'Danger Zone' because this could block access to someone who depe
 
 4. After this change, other collaborators cannot see your work, so you will have to invite them as collaborators. Scroll to the bottom, enter their username, such as LeeMorinUCF, and click 'Add collaborator'. The collaborator will be notified and will be sent a link to activate their status.
 
-### Making a Private Clone of a Public Repo
+### Making a Private Mirror of a Public Repo
+
+In order to have separate access restrictions to a copy of the repo, a simple solution is to create a new repository that mirrors the content of the original. 
+You might use this mirror the same way you would use a fork, except that it is no different than any other repository. 
+
+A command line version of this procedure is available here: [GitHub: How to make a fork of a public repository private?](https://medium.com/@bilalbayasut/github-how-to-make-a-fork-of-public-repository-private-6ee8cacaf9d3)
+
+In essence, this amounts to creating a separate repository that happens to contain the same information as the original. 
+
+Since this is a one-time occurrence, this can be done in your web browser from your GitHub user page. 
+
+1. Under the Repositories tab, click the green New button. 
+2. In the next screen, choose a name for your new repo. 
+3. Before clicking the green Create Repository button, set this new repo to Private. 
+4. After clicking the Create Repository button, you will move to a screen to add content to the new repo. 
+5. Since you are creating a mirror, scroll to the bottom and choose the Import Code button and enter the url for the original repo that you want to clone. 
+6. If you have access to this repo, it will initialize the content to your new repo. 
+7. This repo is ready to be cloned to your local machine. Use the ```git clone``` command as usual.
+8. In order to pull any new content to the original repo, this original repo will have to be set as the upstream repo. 
+After cloning the new repo to your local machine, enter a command like the following
+
+```
+git remote add upstream https://github.com/UpstreamGitUserName/UpstreamRepoName.git
+```
+where you would get the url in the same way you would to clone the original upstream repo. 
+
+9. Now you can pull new content from the upstream to your local machine. 
+
+```
+git pull upstream master
+```
+where the pull is from the master branch of the upstream repo and not the orign. 
+
+10. Now these updates are on your local machine but have not been pushed to your mirror of the repo. 
+
+```
+git push origin master
+```
+will work the same as for any other content you add, except these are already added and committed to the upstream repo. 
+
 
 
 
@@ -126,3 +165,41 @@ git remote show origin
 Notice that the output will show the url of the repo from which new content is fetched, the url to which your updates are pushed, along with a lising of the branches of the repo.
 
 For forked repos, the above commands can be modified with ```origin``` swapped for ```upstream``` to show the references for the upstream repo from which this repo was forked.
+
+
+## Summary: The Commands Used Most Often
+
+### Updates to the Upstream Repo 
+
+For example, when your instructor adds new content, pull those changes to your local machine and push them to your mirror of the repo:
+
+```
+git pull upstream master
+git push origin master
+```
+
+### Updates to Your Local Copy
+
+When you are working on your own coding project, add commit and push those changes to your repo:
+
+```
+git add .
+git commit -m 'Describe changes here'
+git push origin master
+```
+
+This command will not work if your local copy is not up to date. 
+
+### Updates from Another Clone of Your Repo
+
+This command is used when you want to pull any changes from other contributors (such as group members on a team project) or when you change devices. In both of these cases, your current device will not have the most recent copy. 
+
+```
+git pull origin master
+```
+
+As mentioned above, if you want to push updates and your version is not current, you will have to pull the recent changes before you can push your updates to the repo. 
+
+
+
+
